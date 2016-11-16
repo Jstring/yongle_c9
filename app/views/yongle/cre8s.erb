@@ -6,6 +6,10 @@
     	<meta charset="UTF-8">
     	<title>Document</title>
     	
+  <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+  <script src="https://jstring.github.io/p5.min.js"></script>
+  <script src="https://jstring.github.io/p5bots.js"></script>
+
     	
     	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
@@ -15,10 +19,7 @@
     	
     </head>
     <body>
-          <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
-          <script src="scripts/p5.min.js"></script>
-          <script src="scripts/p5bots.js"></script>
-          <div style="margin:100px auto" ><script src="sketch.js"></script></div>        
+               
         
         <div id="fullpage">
             <div class="section">
@@ -41,13 +42,13 @@
                 <div class="ad_image">
                     <div class="img_item item1">
                         <img class="img_asis img1" src="<%= @img_selected[4].text %>">
-                        <img class="close_box close1 close_fake" src="http://img2.keywordsconnect.com/close.gif">
+                        <img class="close_box close1 close_fake" src="image/close.gif">
                     </div>
                     
                     
                      <div class="img_item item2">
                         <img class="img_asis img2" src="<%= @img_selected[9].text %>" width="300px">
-                        <img class="close_box close2" src="http://img2.keywordsconnect.com/close.gif" >
+                        <img class="close_box close2" src="image/close.gif" >
                     </div>
                     <% for_count = 3 %>
                     <% @img_selected.each do |p| %>
@@ -76,7 +77,13 @@
             </div>
                 
             <div class="section"> </div>
-            <div class="section"> Slide 4 </div>
+            <div class="section">
+            <script>
+    
+
+
+
+  </script> </div>
         </div>
         
         
@@ -88,31 +95,71 @@
         
         
         <script>
+
+
+        var b = p5.board('/dev/cu.usbmodem1411', 'arduino');
+
+// Test analog read
+var p = b.pin(0, 'ANALOG', 'INPUT');
+var val_bg = 0;
+p.read(function(val){val_bg=val;});
+
+var bulb_img, bulb_img_mask;
+
+function preload(){
+ 
+}
+
+function setup() {
+ 
+}
+
+function draw(){
+  
+  
+}
         var count = 1;
        
         
         
         $(document).ready(function(){
-            
-            
-            $('#fullpage').fullpage({
+             $('#fullpage').fullpage({
                 sectionsColor: ['#f2f2f2', 'black', '#7BAABE', 'whitesmoke', '#000']
                 
             });
             
+            setInterval(   function a() {
+               if (val_bg>600) {
+
+
+            $('.item1').delay(200).animate(
+                {opacity:"1"},
+              1
+            
+            
+               ) ;
+
+
+
+
+          };
+            
+            }
+, 10);
+            
+          
+        
+ 
+
+
+           
             
             var count = 0 
             
            
             
             
-            $('.item1').delay(1000).animate(
-            {opacity:"1"},
-            1
             
-            
-            ) ;
-
 
 
 
