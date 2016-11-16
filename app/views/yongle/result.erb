@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Yongling</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="https://yonsei-info-googling-wannasleep00.c9users.io/"><img src="http://i.imgur.com/tV71nQ1.jpg"></a>
+    		</div>
+        </div>
+       
+    </div>
+    <br>
+    <br>
+    <div class="wrap">    
+         <div class="result">
+            <h3 class="link rt1"><a href = "<%=@crawlerUrl_google%>"> Google에서 찾기</a></h3>
+        
+            <h3 class="link rt2"><a href = "<%=@crawlerUrl_naver%>"> NAVER에서 찾기</a></h3>
+        
+            <h3 class="link rt3"><a href = "<%=@crawlerUrl_daum%>"> Daum에서 찾기</a></h3>
+        </div>
+    </div>       
+    
+    <div class="content">
+    	<div class="wrap">
+        
+        	<form class=searchForm action="/result" method="post">
+                <div class="form-group">
+                    <input type="search" class="form-control" name="query" id="searchFrom" placeholder="연글링으로 쉽게 찾자">
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg">GO</button>
+            </form>
+            
+    
+            
+        
+</body>
+</html>

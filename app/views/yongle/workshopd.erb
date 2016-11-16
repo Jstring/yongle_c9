@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.css"/>
+    <link rel="stylesheet" type="text/css" href="workshopd.css"/>
+    
+    
+
+</head>
+
+
+<body>
+
+	<div class="menu">
+		<div class="wrap">
+			<div class="left">
+			    
+				<a class="title" href="#HOME"></a></a>
+
+			</div>
+			<div class="right">
+				<a href="#HOME">HOME</a>
+				<a href="#SERVICES">SERVICES</a>
+				<a href="#PORTFOLIO">PORTFOLIO</a>
+				<a href="CONTACT">CONTACT</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div id="fullpage">
+	    <div class="section" id="section0">
+	    	<div class="wrap">
+				<img src="images/title.png"/>
+	    	</div>
+	    </div>
+	    <div class="section" id="section1">2</div>
+	    <div class="section" id="section2">3</div>
+	    <div class="section" id="section3">4</div>
+	</div>
+
+	<script>
+		$('#fullpage').fullpage({
+			sectionsColor: ['#4e51a5', 'pink', 'blue', 'grey']
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8">
+    	<title>Document</title>
+    </head>
+    <body>
+                
+        
+        
+        <% @img_list.each do |p| %>
+            
+               <h1><%=p%></h1>
+            
+             
+        <% end %>
+        
+            
+       
+        
+       
+        <script>
+        
+    
+        
+        
+        $(document).ready(function(){
+             
+             var press = 0 
+             var sum_width = 0
+             var sum_height = 0
+             var img_size = 0
+             var sexual_image = 0 
+             var sexual_number = [27 ,26, 25, 24, 9, 10, 11, 12, 14]
+             var canvas = $('body').width * $('body').height	
+             var article = $('body').width * $('body').height	
+              
+             
+             var iframe_area = 0 
+             var adsense_area =  0	
+             var floating_ad = 0
+             
+             
+            for (i=0; i <28; i++){
+                img_size = img_size + $('img')[i].width * $('img')[i].height
+                
+            };
+            
+            
+            
+            sexual_number.forEach(function (value, key) {
+            
+                sexual_image = sexual_image + ($('img')[value].width * $('img')[value].height)
+                console.log($('img')[value].width * $('img')[value].height)
+            });
+            
+            
+            
+            
+        });
+        
+           
+        </script>
+
+        
+        
+        
+        
+        
+        	
+    	
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<% if false %>
+
+여기서부터주석
+
+<%for i in 0..9%>
+
+<%end%>
+
+
+
+<% @test.each do |p| %>
+   <img src="<%= p %>", width="300px"> 
+  
+<% end %>
+
+
+
+<% @text.each do |p| %>
+
+    <%= p %>
+<% end %>
+
+<% end %>

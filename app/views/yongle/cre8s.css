@@ -1,0 +1,85 @@
+.content_wrapper {
+    margin: 0 auto;
+	width: 600px;
+	overflow: hidden;
+}
+
+.title {
+    color:black;
+    display:block;
+    margin: 30px auto;
+    text-align:center;
+    font-weight:bold;
+    font-size:50px;
+}
+
+
+
+.article {
+    padding-top :30px;
+    
+}
+
+
+.ad_image {
+    
+   
+}
+
+.image_group {
+    
+    
+    
+    opacity: 1;
+}
+
+.img_item {
+   position:absolute;
+    
+}
+
+.item1 {
+     
+    
+    width: 200px;    
+     left: 500px;
+    top: 300px;
+    opacity: 0;
+   
+}
+
+.item2 {
+     
+    
+    width: 200px;    
+     left: 300px;
+    top: 500px;
+    opacity: 0;
+   
+}
+
+.follow_img {
+    opacity:0;
+    position:absolute;
+    left:50%;
+    top:50%;
+}
+
+
+.close_box {
+    display:block;
+    position:absolute;
+    top:15px;
+    left:15px;
+    width:10px;
+    height:10px;
+    background-color:grey;
+    cursor: pointer;
+    
+}
+
+
+
+.img_asis{
+   
+}

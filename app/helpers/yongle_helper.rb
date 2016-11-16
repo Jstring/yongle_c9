@@ -1,0 +1,2 @@
+module YongleHelper
+end
