@@ -19,9 +19,11 @@
     	
     </head>
     <body>
+    
                
         
         <div id="fullpage">
+
             <div class="section" id="section1" data-anchor="HOME">
                 <div class="underbar ub1"> <a href="#TEXT"> next </a> </div>
                 <div class="content_wrapper">
@@ -77,6 +79,28 @@
             <div class="section" id="section2" data-anchor="TEXT">
             
             <div class="underbar ub2"> <a href="#IFRAME">next</a> </div>
+             <img src="image/regul1.png" width="500px" style="position:absolute; left: 100px; top: 30%;">
+                  <img src="image/regul2.png" width="500px" style="position:absolute; left: 750px; top: 30%;">
+                  <img src="image/regul3.png" width="500px" style="position:absolute; left: 1350px; top: 30%;">
+
+
+
+  
+        
+            </div>
+                
+            <div class="section " id="section3" data-anchor="IFRAME">
+            <div class="underbar ub3" > <a href="#WORD">next</a> </div>
+                <div class="guidebar">  <p>실제 언론사 웹사이트 화면 입니다.</p> <p>기사를 제대로 읽을 수 있나요?</p> </div>
+              <div class="iframe">
+              
+               <iframe style="left:50"src="http://www.tvreport.co.kr/?c=news&m=newsview&idx=499848" width="1720px" height="1080px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes"></iframe>
+
+             </div>
+             </div>
+            <div class="section" id="section4" data-anchor="WORD">
+            <div class="underbar ub4"> <a href="#CONTACT">next</a> </div>
+                 
             <div class="text_parse"> 
                 <% @iframe.each do |p| %>
                     <h4 style="display:block; position:absolute; left: <%= rand *1500%>px; top: <%= rand * 1000%>px;"><%=p%></h4> 
@@ -104,33 +128,52 @@
                  <div class="pic7"><iframe xstyle="background-color:white" src="http://adv.imadrep.co.kr/1202_01.html" width="280px" height="400px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
  
  
-  
-        
-            </div>
-                
-            <div class="section " id="section3" data-anchor="IFRAME">
-            <div class="underbar ub3" > <a href="#WORD">next</a> </div>
-                <div class="guidebar">  <p>실제 언론사 웹사이트 화면 입니다.</p> <p>기사를 제대로 읽을 수 있나요?</p> </div>
-              <div class="iframe">
-              
-               <iframe style="left:50"src="http://www.tvreport.co.kr/?c=news&m=newsview&idx=499848" width="1720px" height="1080px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes"></iframe>
+            <div class="text_parse"> 
 
-             </div>
-             </div>
-            <div class="section" id="section4" data-anchor="WORD">
-            <div class="underbar ub4"> <a href="#CONTACT">next</a> </div>
-             
+
+                
+                
+
+                <% @iframe.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *1500%>px; top: <%= rand * 1000%>px;"><%=p%></h4> 
+
+                <% end %>  
+                <% @iframe2.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *500%>px; top: <%= rand * 500%>px;"><%=p%></h4> 
+
+                <% end %>  
+
+                <% @iframe2.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *1500%>px; top: <%= rand * 1000%>px;"><%=p%></h4> 
+
+                <% end %>  
+                
+                
+                </div>
+                
+                 <div class="pic4"><iframe xstyle="background-color:white" src="http://adin.ad4980.kr/s/2015/02/02/z2162018879.html" width="680px" height="195px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+ 
+                <div class="pic5"><iframe xstyle="background-color:white" src="http://adin.ad4980.kr/s/2015/02/13/z2153443789.html" width="249px" height="250px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+
+                 <div class="pic6"><iframe xstyle="background-color:white" src="http://adv.imadrep.co.kr/submain.html?code=MTU6OjQ0OA==" width="300px" height="269px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+
+                 <div class="pic7"><iframe xstyle="background-color:white" src="http://adv.imadrep.co.kr/1202_01.html" width="280px" height="400px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+                <div class="layer"></div>
+                <p class="endbar"> 부끄러움은 당신의 몫</p>     
              </div>
 
              <div class="section" id="section5" data-anchor="CONTACT">
-                아
+                <p style="font-size:50px; text-align:center;"> 부끄러움은 너의 몫 </p>
+                <p style="font-size:30px; text-align:center;">밖으로 나오셔서 우측의 간단한 설명을 참고해주세요. 감사합니다. </p>
+
+
              </div>
         </div>
         
         
-    	      
+    	 
         
-        <div class="count">1</div>
+      
         
         
         
@@ -164,16 +207,20 @@ function draw(){
         
         $(document).ready(function(){
              $('#fullpage').fullpage({
-                sectionsColor: ['#f2f2f2', 'black', '#7BAABE', 'pink', 'green'],
-                anchors: ['HOME', 'TEXT', 'IFRAME', 'WORD', 'CONTACT']
-                
+                sectionsColor: ['#f2f2f2', '#0F100F', '#7BAABE', 'black', 'smokewhite'],
+                anchors: ['HOME', 'TEXT', 'IFRAME', 'WORD', 'CONTACT'],
+                scrollingSpeed: 1000
+             
+              
             });
+            $.fn.fullpage.setMouseWheelScrolling(false);
+             $.fn.fullpage.setAllowScrolling(false);   
             
             setInterval(   function a() {
-               if (val_bg>600) {
+               if (val_bg>800) {
 
 
-            $('.item1').delay(200).animate(
+            $('.item1').delay(10000).animate(
                 {opacity:"1"},
               1
             
@@ -273,6 +320,10 @@ function draw(){
                 
               },1000)}
                 , 3000 ) ;
+
+              
+
+
          });
 
 
@@ -282,7 +333,20 @@ function draw(){
                 opacity:"1"
                 
               },1000)}
-                , 3000 ) ;
+                , 10000 ) ;
+
+                setInterval(   function a() {
+                $('.endbar').animate({
+                opacity:"0.96"
+                
+              },1000)}
+                , 10000 ) ;
+                setInterval(   function a() {
+                $('.layer').animate({
+                opacity:"0.3"
+                
+              },1000)}
+                , 10000 ) ;
          });
 
 

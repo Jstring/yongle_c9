@@ -122,8 +122,8 @@ h4 {display: block;
 
 .pic7{
     position:absolute;
-    left: 300px;
-    top: 400px;
+    left: 200px;
+    top: 550px;
     background: white;
 }
 
@@ -196,7 +196,7 @@ h4 {display: block;
     left:15px;
     width:10px;
     height:10px;
-    background-color:grey;
+    background-color:black;
     cursor: pointer;
     
 }
@@ -218,6 +218,34 @@ h4 {display: block;
     font-size:30px;
     
 }
+
+
+.layer{
+    width:100%;
+    height: 100%;
+    background-color: black;
+    opacity:0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 90;
+}
+.endbar {
+    width:100%;
+    background: white;
+    opacity: 0.7;
+     font-size: 100px;
+     text-align: center;
+     position: absolute;
+    top: 300px;
+    opacity: 0;
+    border: 2px solid;
+    font-weight: bold;
+    z-index: 100;
+
+
+}
+
 
 .iframe {
     left:50%;
