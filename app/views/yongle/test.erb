@@ -37,7 +37,7 @@
         <% count = 0 %>
         <% total_count = 0 %>
         <% for i in @crawler_list %>
-            <h1 style="color:red"><%= @address_list_norm[count] %></h1>
+            <h1 style="color:red"><%= @address_list_ent[count] %></h1>
             <% img_count = 0%>
             
             <% i.css('body//img/@src').each do |p| %>

@@ -57,6 +57,28 @@ class YongleController < ApplicationController
   
   
   def cre8s
+
+
+    
+
+      @iframe = Array.new
+
+     
+
+      i_doc = Nokogiri::HTML(open("http://adv.imadrep.co.kr/750_01.html"))
+      i_doc.css('a').each do |p|
+        @iframe.push(p.text)
+      end
+
+      @iframe2 = Array.new
+
+       i_doc2 = Nokogiri::HTML(open("http://ad.adinc.kr/cgi-bin/PelicanC.dll?impr?pageid=02Xv&out=iframe"))
+      i_doc2.css('a').each do |p|
+        @iframe2.push(p.text)
+      end
+     
+     
+
       cr_address = "http://www.tvreport.co.kr/?c=news&m=newsview&idx=499848"
 
 
@@ -123,7 +145,7 @@ class YongleController < ApplicationController
     
     
     @crawler_list  = []
-    for i in @address_list_norm
+    for i in @address_list_ent
       doc = Nokogiri::HTML(open(i))
       
       

@@ -13,23 +13,24 @@
     	
     	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js"></script>
-	
 	    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.css"/>
     	<link rel="stylesheet" type="text/css" href="/cre8s.css"/>
+
     	
     </head>
     <body>
                
         
         <div id="fullpage">
-            <div class="section">
+            <div class="section" id="section1" data-anchor="HOME">
+                <div class="underbar ub1"> <a href="#TEXT"> next </a> </div>
                 <div class="content_wrapper">
     	
                     <h1 class="title"><%=@head%></h1>	
                     
                     <div class="article">
                         <h3>[TV리포트=김명석 기자] 보건복지부가 세월호 침몰 사고 당시 자신을 희생해 다른 사람을 구해 살신성인의 표본이 된 故박지영 씨와 故 정현선(28세, 여)씨와 아르바이트생 故 김기웅(28세, 남)씨를 포함한 6명을 의사자로 선정했다.</h3>
-                        <h3>보건복지부는 이날 오전 2014년도 제3차 의사상자심사위원회를 개최하고, 세월호 참사 영웅 3명을 포함한 6명의 의사자와 최석준씨 등 2명의 의상자를 각각 인정했다. </h3>
+                        
                         <h3>의사자에는 세월호 침몰 사고와 관련한 故박지영 씨와 故 정현선(28세, 여)씨와 아르바이트생 故 김기웅(28세, 남)씨 외에도 지난해 7월 충남 태안 바닷가에서 있었던 '공주사대부고 해병대 캠프 사고'에서 물에 빠진 친구들을 구하고 사망한 故 이준형(18세, 남)군, 2012년 8월 인천 페인트 원료 보관창고 화재 사고에서 주차 차량의 피해를 막기 위해 노력하다 낙화물이 떨어져 사망한 故 오판석(60세, 남)씨와 박창섭(54세, 남)씨 등도 포함됐다. </h3>
                         <h3>또한 의상자로는 최석준 씨(男· 꽃꽂이 프리랜서), 박종호 씨(男·자영업) 등 2명이다.최 씨는 차로에 전복돼 있는 차량을 발견하고 운전자 구조 및 2차 사고 예방을 위해 수신호를 하던 중 이를 미처 발견하지 못하고 오던 차량에 의해 사고를 당해 수술 및 치료를 받고 있다. 박 씨는 지난 2월 ′안양대보름축제′에서 달집태우기 행사 후 불 위에 넘어진 시민을 구하던 중 화상을 당했다.  </h3>
                         <h3>이번에 인정된 의사자의 유족에게는 의사자 증서와 함께 법률에서 정한 보상금, 의료급여, 교육보호, 취업보호 등의 예우가 행해지며, 의상자에게는 의상자 증서와 함께 법률에서 정한 보상금이 지급될 예정이다. </h3>
@@ -47,48 +48,87 @@
                     
                     
                      <div class="img_item item2">
-                        <img class="img_asis img2" src="<%= @img_selected[9].text %>" width="300px">
+                        <img class="img_asis img2" src="<%= @img_selected[6].text %>" width="500px">
                         <img class="close_box close2" src="image/close.gif" >
                     </div>
                     <% for_count = 3 %>
+                    <div class="img_group">
                     <% @img_selected.each do |p| %>
                         <div class="img_item item<%= for_count%> follow_img">
-                            <img class="img_asis img<%= for_count%>" src="<%= p.text %>" width="300px">
+                            <img class="img_asis img<%= for_count%>" src="<%= p.text %>" width="300px" style="opacity:0; z-index: <%= 50-for_count%> ;display:block; position:absolute; left: <%= rand * 1500%>px; top: <%= rand * 1000%>px;">
                             
                         </div>  
+
+
+
+
+
                         <% for_count += 1 %>
-                    <% end %>
+                    <% end %> 
                     
+                    </div>
                     
                 </div>
             
             </div>
-            <div class="section"> 
+
+
+
+            <div class="section" id="section2" data-anchor="TEXT">
+            
+            <div class="underbar ub2"> <a href="#IFRAME">next</a> </div>
+            <div class="text_parse"> 
+                <% @iframe.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *1500%>px; top: <%= rand * 1000%>px;"><%=p%></h4> 
+
+                <% end %>  
+                <% @iframe2.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *500%>px; top: <%= rand * 500%>px;"><%=p%></h4> 
+
+                <% end %>  
+
+                <% @iframe2.each do |p| %>
+                    <h4 style="display:block; position:absolute; left: <%= rand *1500%>px; top: <%= rand * 1000%>px;"><%=p%></h4> 
+
+                <% end %>  
                 
-                <div class="image_group">
-                    
-                      <% @img.each do |p| %>
-                    <% if p.text.include? "jpg" %>
-                        <img src="<%=p%>" width="150px" > 
-                    <% end %>    
-                <% end %>
+                
                 </div>
+                
+                 <div class="pic4"><iframe xstyle="background-color:white" src="http://adin.ad4980.kr/s/2015/02/02/z2162018879.html" width="680px" height="195px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+ 
+                <div class="pic5"><iframe xstyle="background-color:white" src="http://adin.ad4980.kr/s/2015/02/13/z2153443789.html" width="249px" height="250px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+
+                 <div class="pic6"><iframe xstyle="background-color:white" src="http://adv.imadrep.co.kr/submain.html?code=MTU6OjQ0OA==" width="300px" height="269px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+
+                 <div class="pic7"><iframe xstyle="background-color:white" src="http://adv.imadrep.co.kr/1202_01.html" width="280px" height="400px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes" ></iframe></div>
+ 
+ 
+  
         
             </div>
                 
-            <div class="section"> </div>
-            <div class="section">
-            <script>
-    
+            <div class="section " id="section3" data-anchor="IFRAME">
+            <div class="underbar ub3" > <a href="#WORD">next</a> </div>
+                <div class="guidebar">  <p>실제 언론사 웹사이트 화면 입니다.</p> <p>기사를 제대로 읽을 수 있나요?</p> </div>
+              <div class="iframe">
+              
+               <iframe style="left:50"src="http://www.tvreport.co.kr/?c=news&m=newsview&idx=499848" width="1720px" height="1080px" framespacing="0" frameborder="no" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="yes"></iframe>
 
+             </div>
+             </div>
+            <div class="section" id="section4" data-anchor="WORD">
+            <div class="underbar ub4"> <a href="#CONTACT">next</a> </div>
+             
+             </div>
 
-
-  </script> </div>
+             <div class="section" id="section5" data-anchor="CONTACT">
+                아
+             </div>
         </div>
         
         
-    	
-        
+    	      
         
         <div class="count">1</div>
         
@@ -124,7 +164,8 @@ function draw(){
         
         $(document).ready(function(){
              $('#fullpage').fullpage({
-                sectionsColor: ['#f2f2f2', 'black', '#7BAABE', 'whitesmoke', '#000']
+                sectionsColor: ['#f2f2f2', 'black', '#7BAABE', 'pink', 'green'],
+                anchors: ['HOME', 'TEXT', 'IFRAME', 'WORD', 'CONTACT']
                 
             });
             
@@ -146,23 +187,10 @@ function draw(){
             
             }
 , 10);
-            
-          
-        
- 
-
-
            
-            
             var count = 0 
             
            
-            
-            
-            
-
-
-
            $('.close_fake').mouseover(function() {
                $('.close1').animate(
                    {
@@ -198,82 +226,70 @@ function draw(){
                 })
                 
                 
-                
-                
-                
-                  console.log(count)
-                  
-                  if (count == 2){
-                       $('.image_group').animate({
-                         opacity : '1'
-                       }, 10
-                       
-                       )
-                  }
-                  
-                  if (count==10){
-                       $('body').animate({
-                         scrollTop : '+1000'
-                       }, 1000
-                       
-                       )
-                       
-                  }
 		    });
             
            $('.close2').click(function(){
               $('.item2').css({
                   display:"none"
               }, 1) 
+
               
               
-              $('.follow_img').css(
+
+
+              for (i = 3; i <45 ; i++){
+                console.log(i)
+                $('.img'+i).animate(
                   {
                     opacity:"1"
-                  },1)
-               
+                  },1) 
+              };
+
+              setInterval(   function a() {
+                $('.ub1').animate({
+                opacity:"1"
+              },1000)}
+                , 1000 ) ;
+
+              
+                                          
            });
+
+
+         $('.ub1 a').click(function(){
+               setInterval(   function a() {
+                $('.ub2').animate({
+                opacity:"1"
+                
+              },1000)}
+                , 3000 ) ;
+         });
+
+
+         $('.ub2 a').click(function(){
+               setInterval(   function a() {
+                $('.ub3').animate({
+                opacity:"1"
+                
+              },1000)}
+                , 3000 ) ;
+         });
+
+
+         $('.ub3 a').click(function(){
+               setInterval(   function a() {
+                $('.ub4').animate({
+                opacity:"1"
+                
+              },1000)}
+                , 3000 ) ;
+         });
+
+
 
         });
            
         </script>
-
-        
-        
-        
-        
-        
-        <% if false %>
-        
-        
-        <% @img.each do |p| %>
-            <% if p.text.include? "jpg" %>
-                <img src="<%=p%>" style="width: 150px; height:auto;" > 
-            <% end %>    
-        <% end %>
-        
-        여기서부터주석
-        
-        <%for i in 0..9%>
-        
-        <%end%>
-        
-        
-        
-        <% @test.each do |p| %>
-           <img src="<%= p %>", width="300px"> 
-          
-        <% end %>
-        
-        
-        
-        <% @text.each do |p| %>
-        
-            <%= p %>
-        <% end %>
-        
-        <% end %>
-        	
-    	
+ 	
     </body>
 </html>
